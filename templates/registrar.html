@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Conexão Logística{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Registrar</h1>
+        <form method="POST" action="{{ url_for('routes.registrar') }}">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <button type="submit" class="button">Registrar</button>
+        </form>
+        <p>Já tem uma conta? <a href="{{ url_for('routes.login') }}">Entrar</a></p>
+    </div>
+{% endblock %}

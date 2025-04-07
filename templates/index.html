@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Página Inicial - Conexão Logísticastica{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <h1>Bem vindo a Conexão Logística</h1>
+        <p>Otimize suas entregas e reduza seus custos!</p>
+        <a href="{{ url_for('routes.registrar')}}" class="bitton">Começar Agora</a>
+    </section>
+
+    <section class="features">
+        <h2>Funcionalidades Principais</h2>
+        <ul>
+            <li>Cálculo Inteligente de Rotas</li>
+            <li>Otimização de Agrupamento de Pedidos</li>
+            <li>Acompanhamento em Tempo Real</li>
+            <li>Relatórios Detalhados de Desempenho</li>
+        </ul>
+    </section>
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+    <p>&copy; {{ year }} Seu SaaS de Logística</p>
+{% endblock %}

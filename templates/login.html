@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Entrar - Conexão Logística{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Entrar</h1>
+        <form method="POST" action="{{ url_for('routes.login') }}">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <button type="submit" class="button">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="{{ url_for('routes.registrar') }}">Registrar</a></p>
+    </div>
+{% endblock %}
